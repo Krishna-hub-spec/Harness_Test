@@ -46,7 +46,7 @@ pipeline:
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    connectorRef: Harness_test01
+                    connectorRef: account.harnessImage
                     repo: " krishnateja127/harness_test"
                     tags:
                       - node_test
