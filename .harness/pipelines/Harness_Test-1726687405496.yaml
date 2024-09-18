@@ -42,12 +42,14 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
-                  type: Run
-                  name: Run_4
-                  identifier: Run_4
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    shell: Sh
-                    command: npm start
+                    connectorRef: Harness_test
+                    repo: harness_test
+                    tags:
+                      - node_test
           platform:
             os: Linux
             arch: Amd64
