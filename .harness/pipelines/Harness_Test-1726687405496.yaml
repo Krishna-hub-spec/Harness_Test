@@ -41,17 +41,6 @@ pipeline:
                     command: npm run test
                   timeout: ""
                   type: Run
-              - step:
-                  identifier: dockerbuild
-                  name: docker_build
-                  spec:
-                    connectorRef: <+input>
-                    repo: " krishnateja127/harness_test"
-                    tags:
-                      - latest
-                    caching: true
-                  timeout: ""
-                  type: BuildAndPushDockerRegistry
           platform:
             os: Linux
             arch: Amd64
