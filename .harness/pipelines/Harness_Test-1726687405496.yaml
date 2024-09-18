@@ -41,6 +41,13 @@ pipeline:
                     command: npm run test
                   timeout: ""
                   type: Run
+              - step:
+                  type: Run
+                  name: Run_4
+                  identifier: Run_4
+                  spec:
+                    shell: Sh
+                    command: npm start
           platform:
             os: Linux
             arch: Amd64
