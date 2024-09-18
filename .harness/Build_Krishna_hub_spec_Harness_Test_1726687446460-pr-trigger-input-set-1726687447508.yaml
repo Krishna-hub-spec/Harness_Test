@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Krishna_hub_spec_Harness_Test_1726687446460-pr-trigger-input-set
+  identifier: Build_Krishna_hub_spec_Harness_Test_1726687446460prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Node_Test
+  pipeline:
+    identifier: Build_Krishna_hub_spec_Harness_Test_1726687446460
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
