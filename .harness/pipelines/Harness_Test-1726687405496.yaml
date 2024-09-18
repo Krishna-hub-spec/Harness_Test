@@ -46,7 +46,7 @@ pipeline:
                   name: docker_build
                   spec:
                     connectorRef: <+input>
-                    repo: harness_test
+                    repo: " krishnateja127/harness_test"
                     tags:
                       - latest
                     caching: true
