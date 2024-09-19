@@ -34,6 +34,7 @@ pipeline:
                       spec:
                         shell: Sh
                         command: echo "Hello World!"
+                      description: Run_Test
               - step:
                   identifier: test
                   name: test
