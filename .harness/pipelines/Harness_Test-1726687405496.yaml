@@ -35,21 +35,13 @@ pipeline:
                         shell: Sh
                         command: echo "Hello World!"
                       description: Run_Test
-              - parallel:
-                  - step:
-                      identifier: test
-                      name: test
-                      spec:
-                        command: npm run test
-                      timeout: ""
-                      type: Run
-                  - step:
-                      type: Run
-                      name: Run_4
-                      identifier: Run_4
-                      spec:
-                        shell: Sh
-                        command: npm start
+              - step:
+                  identifier: test
+                  name: test
+                  spec:
+                    command: npm run test
+                  timeout: ""
+                  type: Run
               - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_1
