@@ -35,13 +35,19 @@ pipeline:
                         shell: Sh
                         command: echo "Hello World!"
                       description: Run_Test
-              - step:
-                  identifier: test
-                  name: test
-                  spec:
-                    command: npm run test
-                  timeout: ""
-                  type: Run
+              - parallel:
+                  - step:
+                      identifier: test
+                      name: test
+                      spec:
+                        command: npm run test
+                      timeout: ""
+                      type: Run
+                  - step:
+                      type: Run
+                      name: Run_4
+                      identifier: Run_4
+                      spec: {}
               - step:
                   type: OsvScanner
                   name: OsvScanner_1
